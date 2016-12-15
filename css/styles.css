@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100, 400, 700');
+/*Main Styles*/
+*
+{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body
+{
+	margin:0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: .8em;
+}
+#wrapper
+{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+/*Table*/
+#table
+{
+	width:100%;
+}
+/*Main Row*/
+#mainrow
+{
+	width:100%;
+	float:left;
+	padding-bottom:10px;
+}
+/*Main Columns*/
+.firstColumn
+{
+	border-right: 1px solid #ddd;
+}
+.firstColumn, .secondColumn
+{
+	float:left;
+	display: inline-block;
+	
+}
+#subFirst, #subSecond
+{
+	width:100%;
+	float:left;
+}
+#subFirst:after, #subSecond:after
+{
+	content:'';
+	display: block;
+	width:0;
+	height: 0;
+}
+@media screen and (min-width: 400px) and (max-width: 490px) {
+	.secondColumn
+	{
+		width:250px;
+	}
+	.firstColumn
+	{
+		width:calc(100% - 250px);
+	}
+	.scored, .missed
+	{
+		display: none !important;
+	}
+	.wins, .draws, .defeats
+	{
+		display: inline-block !important;
+	}
+	
+}
+@media screen and (min-width: 215px) and (max-width: 400px){
+	.secondColumn
+	{
+		width:115px;
+	}
+	.firstColumn
+	{
+		width:calc(100% - 115px);
+	}
+	.scored, .missed, .wins, .draws, .defeats
+	{
+		display: none !important;
+	}		
+
+}
+@media screen and (min-width: 490px){
+	.secondColumn
+	{
+		width:340px;
+	}
+	.firstColumn
+	{
+		width:calc(100% - 340px);
+	}
+	.scored, .missed, .wins, .draws, .defeats
+	{
+		display: inline-block !important;
+	}		
+}
+/*Top Row*/
+.mainRow
+{
+	width:100%;
+	position: relative;
+	float:left;
+}
+.mainRow h2
+{
+	text-align: left;
+	padding-left: 60px;
+	float:left;
+}
+.subRow
+{
+	float:left;
+	border-bottom: 1px solid #ddd;
+	padding:10px 0;
+	font-size: .8em;
+}
+.subRow h2
+{
+	margin:0;
+	font-weight: 400;
+}
+
+/*Columns*/
+.place, .flag, .title
+{
+	float:left;
+	display: inline-block;
+}
+.place
+{
+	width:30px;
+	text-align: center;
+	box-shadow:0 -1px 0 #ddd;
+	color:#444;
+	font-weight: 400;
+}
+.flag
+{
+	width:15px;
+	height: 100%;
+	background-size:contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left:10px;
+}
+.title
+{
+	color:#333 !important;
+}
+.title a
+{
+	margin-left:10px;
+	text-decoration: none;
+	color:#6EA7FF;
+}
+.sc
+{
+	color:#6EA7FF;
+	text-align: center;
+}
+.games
+{
+	width:65px;
+}
+.wins, .draws, .defeats, .scored, .missed
+{
+	width:45px;
+	font-weight: 100;
+}
+.points
+{
+	width:50px;
+	font-weight: 100;
+	background: #eee;
+	box-shadow:0 -1px 0 #ddd;
+}
+/*Rows*/
+.row
+{
+	width:100%;
+	float:left;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 100;
+	border-bottom: 1px solid #ddd;
+	display: block;
+}
+.row2
+{
+	text-align: center;
+	float: left;
+}
+.subRow2
+{
+	float:left;
+	display: inline-block;
+}
+.cl
+{
+	background: #68B369;
+}
+.le
+{
+	background: #8ED7AA;
+}
+.au
+{
+	background: #D84855;
+}
+/*Panel*/
+#panel
+{
+	float: left;
+	position: absolute;
+	right: 10px;
+}
+#panel button
+{
+	float:left;
+	outline: none;
+	border:none;
+	background: none;
+	color:#333;
+	display: inline-block;
+	margin-left: 10px;
+}
+#panel button:hover
+{
+	color: #D84855;
+}
+@media screen and (max-width: 750px) {
+
+	#panel
+	{
+		display: none;
+	}
+	
+}
+@media screen and (min-width: 750px) {
+
+	#panel
+	{
+		display: block;
+	}
+	
+}
